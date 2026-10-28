@@ -4,9 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Lukas Schmidt</title>
-    <meta name="description" content="Lukas Schmidt — Visiting Researcher at the Wharton School, working on causal machine learning for clinical decision support." />
+    <meta name="description" content="Lukas Schmidt — Visiting Researcher at Stanford HAI, working on causal machine learning for high-stakes decision-making." />
     <meta property="og:title" content="Lukas Schmidt" />
-    <meta property="og:description" content="Visiting Researcher at the Wharton School. Causal ML for clinical decision support." />
+    <meta property="og:description" content="Visiting Researcher at Stanford HAI. Causal ML for high-stakes decisions." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="assets/profile.jpg" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%97%8B%3C/text%3E%3C/svg%3E" />
@@ -20,10 +20,11 @@
       <header class="hero">
         <div class="hero__text">
           <h1>Lukas Schmidt</h1>
-          <p class="hero__role">Visiting Researcher, The Wharton School &middot; M.Sc. with Honors, TUM</p>
+          <p class="hero__role">Visiting Researcher, Stanford HAI &middot; M.Sc. with Honors, TUM</p>
           <p class="hero__bio">
-            I am a Visiting Researcher at the Wharton School (University of
-            Pennsylvania) and a graduate student in Finance and Information
+            I am a Visiting Researcher at the Stanford Institute for
+            Human-Centered Artificial Intelligence (HAI) and a graduate
+            student in Finance and Information
             Management (FIM) at the Technical University of Munich. Before
             that, I studied Industrial Engineering and Management to pursue
             my interest in applied math and physics. I have also followed the
@@ -31,7 +32,7 @@
             the <em>Manage and More</em> scholarship at UnternehmerTUM. My
             research sits at the intersection of <em>causal machine
             learning</em>, <em>human&ndash;AI collaboration</em>, and
-            <em>agentic AI</em>.
+            <em>high-stakes decision-making</em>.
           </p>
           <ul class="links" aria-label="Profiles and contact">
             <li><a href="mailto:lukas.s.schmidt@tum.de">Email</a></li>
@@ -45,21 +46,39 @@
         </figure>
       </header>
 
+      <ul class="affiliations" aria-label="Affiliations">
+        <li><a href="https://www.stanford.edu/"><img src="assets/logos/stanford.svg" alt="Stanford University" class="affiliations__stanford" /></a></li>
+        <li><a href="https://hai.stanford.edu/"><img src="assets/logos/hai.svg" alt="Stanford Institute for Human-Centered Artificial Intelligence" class="affiliations__hai" /></a></li>
+        <li><a href="https://www.wharton.upenn.edu/"><img src="assets/logos/wharton.svg" alt="The Wharton School, University of Pennsylvania" class="affiliations__wharton" /></a></li>
+        <li><a href="https://www.tum.de/"><img src="assets/logos/tum.svg" alt="Technical University of Munich" class="affiliations__tum" /></a></li>
+        <li><a href="https://www.unternehmertum.de/"><img src="assets/logos/unternehmertum.svg" alt="UnternehmerTUM" class="affiliations__utum" /></a></li>
+      </ul>
+
       <section class="section" id="research">
         <h2>Research</h2>
         <p>
-          My current work investigates how causal machine learning can be
-          integrated into clinical decision support systems so that clinicians
-          can reason about treatment effects, not just predictions. I design
-          and evaluate information systems built on EHR data, study workflow
-          integration through clinician-in-the-loop experiments, and care
-          about what makes causal estimates trustworthy enough to act on in
-          high-stakes settings.
+          I am interested in how people make decisions in the age of AI
+          &mdash; especially in settings where every decision carries high
+          risk or high impact.
         </p>
         <p>
-          In parallel, I work on <em>agentic AI</em>: how it is changing the
-          way humans interact with the web, how such agents can be detected,
-          and what infrastructure should look like for the agentic era ahead.
+          Causal inference has a long history, but <em>causal machine
+          learning</em> has only recently emerged as a field of its own. Most
+          of its research focuses on algorithmic advances and leaves out the
+          people who ultimately have to work with these systems. My research
+          therefore started by identifying the requirements such systems need
+          to meet in practice. We then translated these requirements into
+          prototype systems that combine recent advances in causal machine
+          learning with the newly gained design knowledge. Because every
+          decision in medicine carries significant consequences, we chose
+          clinical decision support as our starting point.
+        </p>
+        <p>
+          Currently, I am working on causal models for new or altered
+          decision cases. We study how large language models interact with
+          the underlying causal models, with the goal of developing new
+          approaches to <em>decision abstention</em> &mdash; recognizing when
+          a system should hold back rather than recommend.
         </p>
       </section>
 
@@ -67,35 +86,41 @@
         <h2>Publications</h2>
         <ol class="pubs">
           <li class="pub">
-            <div class="pub__title">
-              Integrating Causal Machine Learning into Clinical Decision Support
-              Systems: Insights from Literature and Practice
-            </div>
-            <div class="pub__meta">
-              <span class="pub__authors">
-                Domenique Zipperling, <strong>Lukas Schmidt</strong>, Benedikt
-                Hahn, Niklas K&uuml;hl, Steven Kimbrough
-              </span>
-              <span class="pub__venue"><a href="https://ecis2026.it/">European Conference on Information Systems (ECIS)</a>, Milan &middot; Full Paper</span>
-              <span class="pub__year">2026</span>
-            </div>
-            <div class="pub__links">
-              <a href="https://aisel.aisnet.org/ecis2026/cog_hbis/cog_hbis/5/">AISeL</a>
-              <a href="https://aisel.aisnet.org/cgi/viewcontent.cgi?article=1072&amp;context=ecis2026">PDF</a>
+            <img class="pub__logo" src="assets/logos/ecis.svg" alt="" />
+            <div class="pub__body">
+              <div class="pub__title">
+                Integrating Causal Machine Learning into Clinical Decision Support
+                Systems: Insights from Literature and Practice
+              </div>
+              <div class="pub__meta">
+                <span class="pub__authors">
+                  Domenique Zipperling, <strong>Lukas Schmidt</strong>, Benedikt
+                  Hahn, Niklas K&uuml;hl, Steven Kimbrough
+                </span>
+                <span class="pub__venue"><a href="https://ecis2026.it/">European Conference on Information Systems (ECIS)</a>, Milan &middot; Full Paper</span>
+                <span class="pub__year">2026</span>
+              </div>
+              <div class="pub__links">
+                <a href="https://aisel.aisnet.org/ecis2026/cog_hbis/cog_hbis/5/">AISeL</a>
+                <a href="https://aisel.aisnet.org/cgi/viewcontent.cgi?article=1072&amp;context=ecis2026">PDF</a>
+              </div>
             </div>
           </li>
           <li class="pub">
-            <div class="pub__title">
-              What Does It Take to Detect an AI Agent? Minimal Feature Sets for
-              Behavioral Detection under Browser Automation
-            </div>
-            <div class="pub__meta">
-              <span class="pub__authors">
-                Vishisht Choudhary, <strong>Lukas Schmidt</strong>, Anne Zoe
-                Kenntner, Feras Skhab, Michel Osswald, Jens Ernstberger
-              </span>
-              <span class="pub__venue"><a href="https://ne-agents-day.github.io/">North East AI Agents Day at Jane Street</a>, New York &middot; Abstract</span>
-              <span class="pub__year">2026</span>
+            <img class="pub__logo" src="assets/logos/jane-street-stacked.svg" alt="" />
+            <div class="pub__body">
+              <div class="pub__title">
+                What Does It Take to Detect an AI Agent? Minimal Feature Sets for
+                Behavioral Detection under Browser Automation
+              </div>
+              <div class="pub__meta">
+                <span class="pub__authors">
+                  Vishisht Choudhary, <strong>Lukas Schmidt</strong>, Anne Zoe
+                  Kenntner, Feras Skhab, Michel Osswald, Jens Ernstberger
+                </span>
+                <span class="pub__venue"><a href="https://ne-agents-day.github.io/">North East AI Agents Day at Jane Street</a>, New York &middot; Abstract</span>
+                <span class="pub__year">2026</span>
+              </div>
             </div>
           </li>
         </ol>
@@ -105,23 +130,33 @@
         <h2>News</h2>
         <ul class="news">
           <li>
+            <time datetime="2026-10">2026 &middot; Oct</time>
+            <img class="news__logo" src="assets/logos/hai-mark.svg" alt="" />
+            <span>Start as Visiting Researcher at the Stanford Institute for Human&#8209;Centered AI (HAI).</span>
+          </li>
+          <li>
             <time datetime="2026-06">2026 &middot; Jun</time>
+            <img class="news__logo" src="assets/logos/ecis.svg" alt="" />
             <span>Full paper presentation at ECIS&nbsp;2026 in Milan.</span>
           </li>
           <li>
             <time datetime="2026-05">2026 &middot; May</time>
+            <img class="news__logo" src="assets/logos/jane-street-mark.svg" alt="" />
             <span>Abstract presentation at the North East AI Agents Day at Jane Street, NYC.</span>
           </li>
           <li>
             <time datetime="2026-02">2026 &middot; Feb</time>
+            <img class="news__logo" src="assets/logos/wharton-shield.svg" alt="" />
             <span>Start as Visiting Researcher in Causal ML &amp; Decision Support Systems at the Wharton School, UPenn.</span>
           </li>
           <li>
             <time datetime="2025-09">2025 &middot; Sep</time>
+            <img class="news__logo" src="assets/logos/unternehmertum.svg" alt="" />
             <span>Start of Manage&nbsp;and&nbsp;More scholarship program at UnternehmerTUM.</span>
           </li>
           <li>
             <time datetime="2024-10">2024 &middot; Oct</time>
+            <img class="news__logo" src="assets/logos/tum.svg" alt="" />
             <span>Start of M.Sc. in Finance and Information Management (FIM) at TUM.</span>
           </li>
         </ul>

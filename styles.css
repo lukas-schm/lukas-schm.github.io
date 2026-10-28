@@ -7,6 +7,8 @@
   --rule: #e8e6df;
   --accent: #2a4d8f;
   --accent-soft: #eaf0fb;
+  --logo-filter: brightness(0);
+  --logo-opacity: 0.62;
   --radius: 10px;
   --max: 760px;
   --gap: 1.6rem;
@@ -24,6 +26,8 @@
     --rule: #2a2c33;
     --accent: #8fb4ff;
     --accent-soft: #1f2a3f;
+    --logo-filter: brightness(0) invert(1);
+    --logo-opacity: 0.7;
   }
 }
 
@@ -152,6 +156,60 @@ code {
   }
 }
 
+/* Logos render as monochrome silhouettes that follow the theme */
+.affiliations img,
+.pub__logo,
+.news__logo {
+  filter: var(--logo-filter);
+  opacity: var(--logo-opacity);
+}
+
+.affiliations {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem 2.75rem;
+}
+
+.affiliations a,
+.affiliations a:hover {
+  display: block;
+  border-bottom: 0;
+}
+
+.affiliations img {
+  display: block;
+  width: auto;
+  transition: opacity 0.15s ease;
+}
+
+.affiliations a:hover img {
+  opacity: 1;
+}
+
+.affiliations__stanford {
+  height: 26px;
+}
+
+.affiliations__hai {
+  height: 34px;
+}
+
+.affiliations__wharton {
+  height: 34px;
+}
+
+.affiliations__tum {
+  height: 24px;
+}
+
+.affiliations__utum {
+  height: 30px;
+}
+
 .section {
   border-top: 1px solid var(--rule);
   padding-top: 1.75rem;
@@ -178,6 +236,20 @@ code {
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
+}
+
+.pub {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 1.1rem;
+  align-items: start;
+}
+
+.pub__logo {
+  width: 64px;
+  height: 26px;
+  margin-top: 0.15rem;
+  object-fit: contain;
 }
 
 .pub__title {
@@ -217,7 +289,7 @@ code {
 
 .news li {
   display: grid;
-  grid-template-columns: 110px 1fr;
+  grid-template-columns: 110px 28px 1fr;
   gap: 0.75rem;
   align-items: baseline;
 }
@@ -226,6 +298,14 @@ code {
   color: var(--ink-mute);
   font-variant-numeric: tabular-nums;
   font-size: 0.92rem;
+}
+
+.news__logo {
+  width: 28px;
+  height: 18px;
+  align-self: start;
+  margin-top: 0.2rem;
+  object-fit: contain;
 }
 
 .footer {
@@ -254,8 +334,36 @@ code {
   .hero__text h1 {
     font-size: 1.85rem;
   }
+  .affiliations {
+    justify-content: space-between;
+    gap: 1rem 0.75rem;
+  }
+  .affiliations__stanford {
+    height: 15px;
+  }
+  .affiliations__hai,
+  .affiliations__wharton {
+    height: 20px;
+  }
+  .affiliations__tum {
+    height: 13px;
+  }
+  .affiliations__utum {
+    height: 17px;
+  }
+  .pub {
+    grid-template-columns: 44px 1fr;
+    gap: 0.85rem;
+  }
+  .pub__logo {
+    width: 44px;
+    height: 20px;
+  }
   .news li {
-    grid-template-columns: 1fr;
-    gap: 0.1rem;
+    grid-template-columns: 28px 1fr;
+    gap: 0.1rem 0.75rem;
+  }
+  .news time {
+    grid-column: 1 / -1;
   }
 }
